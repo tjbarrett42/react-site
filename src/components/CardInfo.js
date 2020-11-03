@@ -5,7 +5,6 @@ function CardInfo(props) {
 
     const style = useSpring({opacity: 1, from: {opacity: 0}});
 
-
     return (
         <animated.div className="tb-card-info" style={style}>
             <p className="tb-card-title">{props.title}</p>
