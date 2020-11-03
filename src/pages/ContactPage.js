@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 function ContactPage(props){
     return(
         <div>
-            <Hero title={props.title} subTitle={props.subTitle}></Hero>
+            <Hero title={props.title} emoji={props.emoji} subTitle={props.subTitle}></Hero>
             <Contact/>
         </div>
     )

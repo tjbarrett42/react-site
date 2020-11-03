@@ -12,6 +12,8 @@ import ExperiencePage from "./pages/ExperiencePage";
 import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
 
+const emoji = require("emoji-dictionary");
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -25,8 +27,10 @@ class App extends React.Component {
                 { title: 'Contact', path: '/contact'}
             ],
             home: {
-                title: 'Hi, Tim here',
-                subTitle: 'I like to ski fast and type faster.'
+                title: 'Hi, I\'m Tim',
+                emoji: emoji.getUnicode("skier").toString(),
+                subTitle: 'Ski fast - type faster',
+                text: 'I\'m a 2020 graduate with a B.S. in CompSci from Stevens Institute of Technology in Hoboken, NJ, with an interest in mental and physical health solutions in tech.'
             },
             projects: {
                 title: 'Projects',
@@ -41,6 +45,7 @@ class App extends React.Component {
             },
             contact: {
                 title: 'Say hello',
+                emoji: emoji.getUnicode("wave").toString(),
                 subTitle: 'Want to get in touch?'
             }
         }
@@ -50,12 +55,12 @@ class App extends React.Component {
         //Would put navbar in container, but freaks out, likely a DOM issue
         return (
             <Router>
-                <Container className="p-0" fluid={true}>
-                    <Navbar  expand="lg" sticky="top">
+                <Container className="p-0 bg-color" fluid={true} >
+                    <Navbar expand="lg">
                         <Navbar.Brand>Timothy Barrett</Navbar.Brand>
                         <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
                         <Navbar.Collapse id="navbar-toggle">
-                            <Nav className="ml-auto">
+                            <Nav className="ml-auto nav-color">
                                 <Link className="nav-link" to="/">Home</Link>
                                 <Link className="nav-link" to="/projects">Projects</Link>
                                 <Link className="nav-link" to="/experience">Experience</Link>
@@ -65,13 +70,13 @@ class App extends React.Component {
                         </Navbar.Collapse>
                     </Navbar>
 
-                    <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle}/>}/>
+                    <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} emoji={this.state.home.emoji} text={this.state.home.text}/>}/>
                     <Route path="/projects" render={() => <ProjectsPage title={this.state.projects.title} subTitle={this.state.projects.subTitle}/>}/>
                     <Route path="/experience" render={() => <ExperiencePage title={this.state.experience.title} /> } />
                     <Route path="/resume" render={() => <ResumePage title={this.state.resume.title} subTitle={this.state.resume.subTitle} /> } />
-                    <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} subTitle={this.state.contact.subTitle} />}/>
+                    <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} subTitle={this.state.contact.subTitle} emoji={this.state.contact.emoji}/>}/>
 
-                    <Footer />
+                    <Footer className="sticky-bottom"/>
 
                 </Container>
             </Router>

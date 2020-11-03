@@ -6,9 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -46,9 +44,31 @@ code {
 }
 .navbar
 {
-  background-color: #EAE7DC;
+  font-variant: all-petite-caps;
+  background-color: #eae7dc;
+}
+.navbar-brand{
+
+  color:  #8E8D8A !important;
 }
 
 li {
   font-size: 24px;
 }
+
+.bg-color {
+
+  background-color: #eae7dc;
+}
+
+.display-1 {
+  font-family: Roboto;
+  color: #E85A4F;
+}
+
+.display-4 {
+  font-family: Roboto;
+  color: #E98074;
+}
+
+
