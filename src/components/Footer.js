@@ -1,22 +1,30 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+// Workaround for footer problems
+const phantom = {
+    display: 'block',
+    padding: '20px',
+    height: '80px',
+    width: '100%',
+};
+
 function Footer(){
     return (
-        <footer className="mt-5">
-            <Container fluid={true}>
-                <Row className="border-top justify-content-between p-3">
-                    <Col className="p-0" md={3} sm={12}>
-                        Timothy Barrett
-                    </Col>
-                    <Col className="p-0 d-flex justify-content-end" md={3}>
-                        This site was made by Timothy Barrett C2020.
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
+        <Fragment>
+            <div style={phantom}></div>
+            <footer className="mt-5">
+                <Container fluid={true}>
+                    <Row className="justify-content-between p-3">
+                        <Col className="p-0 d-flex justify-content-center">
+                            Copyright © 2020 Timothy Barrett
+                        </Col>
+                    </Row>
+                </Container>
+            </footer>
+        </Fragment>
     );
 }
 

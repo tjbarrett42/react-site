@@ -28,7 +28,7 @@ class App extends React.Component {
             ],
             home: {
                 title: 'Hi, I\'m Tim',
-                emoji: emoji.getUnicode("skier").toString(),
+                emoji: '',
                 subTitle: 'Ski fast - type faster',
                 text: 'I\'m a 2020 graduate with a B.S. in CompSci from Stevens Institute of Technology in Hoboken, NJ, with an interest in mental and physical health solutions in tech.'
             },
@@ -55,7 +55,7 @@ class App extends React.Component {
         //Would put navbar in container, but freaks out, likely a DOM issue
         return (
             <Router>
-                <Container className="p-0 bg-color" fluid={true} >
+                <Container className="p-0 bg-color d-flex flex-column position-relative min-vh-100" fluid={true} >
                     <Navbar expand="lg">
                         <Navbar.Brand>Timothy Barrett</Navbar.Brand>
                         <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
@@ -76,12 +76,11 @@ class App extends React.Component {
                     <Route path="/resume" render={() => <ResumePage title={this.state.resume.title} subTitle={this.state.resume.subTitle} /> } />
                     <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} subTitle={this.state.contact.subTitle} emoji={this.state.contact.emoji}/>}/>
 
-                    <Footer className="sticky-bottom"/>
+                    <Footer />
 
                 </Container>
             </Router>
         );
     }
 }
-
 export default App;

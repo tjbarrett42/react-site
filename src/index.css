@@ -1,6 +1,4 @@
 body {
-  margin: 0;
-
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,6 +16,7 @@ code {
 }
 
 .tb-card-image {
+  filter: grayscale(25%);
   border-radius: 10px;
   width: 300px;
   height: 300px;
@@ -45,30 +44,53 @@ code {
 .navbar
 {
   font-variant: all-petite-caps;
-  background-color: #eae7dc;
+  background-color: #F5F5F5;
 }
 .navbar-brand{
 
-  color:  #8E8D8A !important;
+  color:  #2a274e !important;
+}
+
+.nav-link{
+  color: #2a274e !important;
 }
 
 li {
   font-size: 24px;
+  color: #5d5b78;
 }
 
 .bg-color {
 
-  background-color: #eae7dc;
+  background-color: #F5F5F5;
 }
 
 .display-1 {
   font-family: Roboto;
-  color: #E85A4F;
+  color: #2a274e;
 }
 
 .display-4 {
   font-family: Roboto;
-  color: #E98074;
+  color: #5d5b78;
+}
+
+h1 {
+  color: #2a274e;
+}
+
+h2, h3 {
+  color: #5d5b78;
+}
+
+footer {
+  font-variant: all-petite-caps;
+  font-family: Roboto;
+  text-decoration-color: #2a274e;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
 }
 
 
