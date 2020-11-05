@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import epidemicsim from '../assets/images/epidemicsim.png';
 import spotifystats from '../assets/images/spotifystats.png';
 import personalsite from '../assets/images/personalsite.png';
+import reactsite from '../assets/images/reactsite.png';
 
 import Card from '../components/Card';
 
@@ -15,22 +16,30 @@ class Carousel extends React.Component{
             items: [
                 {
                     id: 0,
+                    title: 'Personal Site',
+                    subTitle: 'React implementation of this site',
+                    imgSrc: reactsite,
+                    link: 'https://github.com/tjbarrett42/react-site',
+                    selected: false
+                },
+                {
+                    id: 1,
                     title: 'Epidemic Simulator',
-                    subTitle: 'People died, the end',
+                    subTitle: 'Simulation West Africa Ebola outbreak (pre-2020 project!)',
                     imgSrc: epidemicsim,
                     link: 'https://github.com/ebweinberger/epidemic-sim',
                     selected: false
                 },
                 {
-                    id: 1,
+                    id: 2,
                     title: 'Spotify Stats',
-                    subTitle: 'Listen to music',
+                    subTitle: 'Webview recreation of spotify using Spotify API',
                     imgSrc: spotifystats,
                     link: 'https://github.com/tjbarrett42/spotify-stats',
                     selected: false
                 },
                 {
-                    id: 2,
+                    id: 3,
                     title: 'Classic Personal Website',
                     subTitle: 'Original HTML/CSS/jQuery version of this site',
                     imgSrc: personalsite,

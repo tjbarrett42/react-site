@@ -34,7 +34,7 @@ class App extends React.Component {
             },
             projects: {
                 title: 'Projects',
-                subTitle: 'Some things Ive worked on:'
+                subTitle: 'Some things I\'ve worked on:'
             },
             experience: {
                 title: 'Work Experience'
@@ -56,7 +56,7 @@ class App extends React.Component {
         return (
             <Router>
                 <Container className="p-0 bg-color d-flex flex-column position-relative min-vh-100" fluid={true} >
-                    <Navbar expand="lg">
+                    <Navbar collapseOnSelect expand="lg">
                         <Navbar.Brand>Timothy Barrett</Navbar.Brand>
                         <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
                         <Navbar.Collapse id="navbar-toggle">
@@ -64,7 +64,7 @@ class App extends React.Component {
                                 <Link className="nav-link" to="/">Home</Link>
                                 <Link className="nav-link" to="/projects">Projects</Link>
                                 <Link className="nav-link" to="/experience">Experience</Link>
-                                <Link className="nav-link" to="/resume">Resume</Link>
+                                <Link variant="outline-info" className="nav-link" to="/resume">Resume</Link>
                                 <Link className="nav-link" to="/contact">Contact</Link>
                             </Nav>
                         </Navbar.Collapse>

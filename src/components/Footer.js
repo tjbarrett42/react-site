@@ -17,9 +17,14 @@ function Footer(){
             <div style={phantom}></div>
             <footer className="mt-5">
                 <Container fluid={true}>
-                    <Row className="justify-content-between p-3">
+                    <Row className="justify-content-between p-1">
                         <Col className="p-0 d-flex justify-content-center">
                             Copyright © 2020 Timothy Barrett
+                        </Col>
+                    </Row>
+                    <Row className="justify-content-between p-0">
+                        <Col className="p-0 d-flex justify-content-center">
+                            github.com/tjbarrett42
                         </Col>
                     </Row>
                 </Container>
