@@ -7,12 +7,12 @@ import Col from 'react-bootstrap/Col';
 function Hero(props) {
 
     return (
-        <Jumbotron className="bg-transparent jumbotron-fluid p-0">
+        <Jumbotron className="bg-transparent jumbotron-fluid pb-0 mb-0">
             <Container fluid={true} >
-                <Row className="justify-content-center py-5">
+                <Row className="justify-content-center">
                     <Col md={8} sm={12}>
-                        { props.title && <h1 className="display-1 font-weight-bold">{props.title} {props.emoji}</h1>}
-                        { props.subTitle && <h3 className="display-4 font-weight-light">{props.subTitle}</h3>}
+                        { props.title && <h1 className="display-3 font-weight-bold">{props.title} {props.emoji}</h1>}
+                        { props.subTitle && <h3 className="display-8 font-weight-normal">{props.subTitle}</h3>}
                         { props.text && <h3 className="lead font-weight-light">{props.text}</h3>}
                     </Col>
                 </Row>

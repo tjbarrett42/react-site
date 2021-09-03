@@ -1,10 +1,13 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import Sidekick from "../components/Sidekick";
+import Intro from "../components/Intro";
 
 function HomePage(props){
     return(
         <div>
-            <Hero title={props.title} emoji={props.emoji} subTitle={props.subTitle} text={props.text}/>
+            <Sidekick title={props.title} subTitle={props.subTitle}></Sidekick>
+            <Intro></Intro>
         </div>
 
     )

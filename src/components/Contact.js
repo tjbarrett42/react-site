@@ -9,10 +9,10 @@ function Contact(){
         <Container fluid="sm">
             <Row className="text-center">
                 <Col sm="12" md={6}>
-                    <Button href="https://www.linkedin.com/in/timjbarrett" target="_blank" variant="light"><h3 className="text-center font-weight-light">Add me on LinkedIn</h3></Button>
+                    <Button href="https://www.linkedin.com/in/timjbarrett" target="_blank" variant="transparent"><h3 className="text-center font-weight-light m-0">Add me on LinkedIn</h3></Button>
                 </Col>
                 <Col sm="12" md={6}>
-                    <Button href="https://github.com/tjbarrett42" target="_blank" variant="light"><h3 className="text-center font-weight-light">See me on GitHub</h3></Button>
+                    <Button href="https://github.com/tjbarrett42" target="_blank" variant="transparent"><h3 className="text-center font-weight-light m-0">See me on GitHub</h3></Button>
                 </Col>
             </Row>
             <Row>

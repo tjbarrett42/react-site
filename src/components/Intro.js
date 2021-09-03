@@ -8,7 +8,9 @@ function Intro(){
         <Container className="justify-content-end">
             <Row>
                 <Col className="text-center font-weight-light">
-                    <p>I'm a 2020 graduate with a B.S. in CompSci from Stevens Institute of Technology in Hoboken, NJ.</p>
+                    <p>Hello, my name is Tim. </p>
+                    <p>I'm a 2020 graduate with a B.S. in Computer Science from Stevens Institute of Technology in Hoboken, NJ and passionate for self development and fitness solutions in tech.</p>
+                    <p>My love for kinesiology, nutrition, and nature expands to my favorite hobbies: skiing, biking, cooking, and camping.</p>
                 </Col>
             </Row>
 

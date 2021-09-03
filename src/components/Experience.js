@@ -18,12 +18,10 @@ function Experience(props){
             <Row className="justify-content-center">
                 <Col  sm={12} lg={8}>
                     <ul className="font-weight-light">
-                        <li>Application engineer for front-to-back office credit solution with international clientbase.</li>
-                        <li>Created SQL scripts to repair and prevent future portfolio discrepancies with defensive programming.</li>
-                        <li>Utilized XPath and Transact-SQL debugging queries to identify client and server errors in product code and XML response/request data and XSLTs.</li>
-                        <li>Mapped and documented root cause assessments to decrease product defects.</li>
-                        <li>Led daily standups to prioritize towards high severity implementation requests and fixes.</li>
-                        <li>Advised and consulted clients on programming and architecture best practices.</li>
+                        <li>Implemented Javascript SalesForce database search feature within proprietary Chrome extension increasing documentation cross-referencing productivity for 30 engineers, approved and managed through GitLab.</li>
+                        <li>Wrote, tested, and deployed SQL scripts for client production environments to resolve trade data inconsistencies with back office providers.</li>
+                        <li>Debugged product XSLT edge cases against custom client implementations to document defects and translate into consulting requests.</li>
+                        <li>Managed product expectations and functionality for client base of over 50 different hedge funds, firms, and investment banks through email and phone.</li>
                     </ul>
                 </Col>
             </Row>
@@ -39,10 +37,9 @@ function Experience(props){
             <Row className="justify-content-center">
                 <Col  sm={12} lg={8}>
                     <ul className="font-weight-light">
-                        <li>Designed and developed project proposals to identify and utilize sources of internal innovation within Hackensack
-                            Meridian Health’s hospital network, with potential to save millions on physician operations.</li>
-                        <li>Conveyed and translated executive goals to in-house products to realize optimal pricing and marketing strategies.</li>
-                        <li>Qualified and evaluated 30+ idea management programs for optimal internal and external usage.</li>
+                        <li>Created the project prioritization system for NJII's largest innovation product, a platform to encourage and support physician incubation of high ROI solutions in Hackensack Meridian Health’s internal workforce, securing a \$1,000,000 contract.</li>
+                        <li>Wrote business requirement documents and statements of work for product implementation.</li>
+                        <li>Negotiated directly with client executives to ensure operation within project budgets.</li>
                     </ul>
                 </Col>
             </Row>

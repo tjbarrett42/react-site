@@ -9,10 +9,10 @@ function Resume(){
         <Container fluid="sm">
             <Row>
                 <Col sm={12} lg={6} className="text-center">
-                    <Button href="https://raw.githubusercontent.com/tjbarrett42/resume/main/TimothyBarrettResume.pdf" target="_blank" variant="light"><h3 className="text-center font-weight-light">Download from Github (.pdf)</h3></Button>
+                    <Button href="https://raw.githubusercontent.com/tjbarrett42/resume/main/TimothyBarrettResume.pdf" target="_blank" variant="transparent"><h3 className="text-center font-weight-light m-0">Download from Github (.pdf)</h3></Button>
                 </Col>
                 <Col sm={12} lg={6} className="text-center">
-                    <Button href="https://github.com/tjbarrett42/resume" target="_blank" variant="light"><h3 className="text-center font-weight-light">Github Repository (.tex, .cls)</h3></Button>
+                    <Button href="https://github.com/tjbarrett42/resume" target="_blank" variant="transparent"><h3 className="text-center font-weight-light m-0">Github Repository (.tex, .cls)</h3></Button>
                 </Col>
             </Row>
         </Container>

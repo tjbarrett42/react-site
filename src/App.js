@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Footer from "./components/Footer";
+import MainHero from "./components/MainHero";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ExperiencePage from "./pages/ExperiencePage";
@@ -20,33 +21,35 @@ class App extends React.Component {
         this.state = {
             title: 'Timothy Barrett',
             headerLinks: [
-                { title: 'Home', path: '/'},
-                { title: 'Projects', path: '/projects'},
-                { title: 'Experience', path: '/experience'},
-                { title: 'Resume', path: '/resume'},
-                { title: 'Contact', path: '/contact'}
+                { title: 'home', path: '/'},
+                { title: 'projects', path: '/projects'},
+                { title: 'experience', path: '/experience'},
+                { title: 'resume', path: '/resume'},
+                { title: 'contact', path: '/contact'}
             ],
             home: {
-                title: 'Hi, I\'m Tim',
+                title: 'about',
                 emoji: '',
-                subTitle: 'Ski fast - type faster',
-                text: 'I\'m a 2020 graduate with a B.S. in CompSci from Stevens Institute of Technology in Hoboken, NJ, with an interest in mental and physical health solutions in tech.'
+                subTitle: '',
+                text: ''
             },
             projects: {
-                title: 'Projects',
-                subTitle: 'Some things I\'ve worked on:'
+                title: 'projects',
+                emoji: '',
+                subTitle: '',
+                text: ''
             },
             experience: {
-                title: 'Work Experience'
+                title: 'work experience'
             },
             resume: {
-                title: 'Resume',
-                subTitle: 'Grab the latest version below:'
+                title: 'resume',
+                subTitle: 'grab the latest version below:'
             },
             contact: {
-                title: 'Say hello',
+                title: 'contact',
                 emoji: emoji.getUnicode("wave").toString(),
-                subTitle: 'Want to get in touch?'
+                subTitle: 'get in touch:'
             }
         }
     }
@@ -55,26 +58,39 @@ class App extends React.Component {
         //Would put navbar in container, but freaks out, likely a DOM issue
         return (
             <Router>
-                <Container className="p-0 bg-color d-flex flex-column position-relative min-vh-100" fluid={true} >
-                    <Navbar collapseOnSelect expand="lg">
-                        <Navbar.Brand>Timothy Barrett</Navbar.Brand>
-                        <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
-                        <Navbar.Collapse id="navbar-toggle">
-                            <Nav className="ml-auto nav-color">
-                                <Link className="nav-link" to="/">Home</Link>
-                                <Link className="nav-link" to="/projects">Projects</Link>
-                                <Link className="nav-link" to="/experience">Experience</Link>
-                                <Link variant="outline-info" className="nav-link" to="/resume">Resume</Link>
-                                <Link className="nav-link" to="/contact">Contact</Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Navbar>
+                    <Container className="bg-color d-flex flex-column position-relative min-vh-100 p-0" fluid={true} >
+                        <MainHero></MainHero>
+                        <Navbar bg="transparent" variant="light" className="">
+                            <Container className="justify-content-center">
+                                <Nav className="">
+                                    <Link className="nav-link" to="/">about</Link>
+                                    <Link className="nav-link" to="/projects">projects</Link>
+                                    <Link className="nav-link" to="/experience">experience</Link>
+                                    <Link variant="outline-info" className="nav-link" to="/resume">resume</Link>
+                                    <Link className="nav-link" to="/contact">contact</Link>
+                                </Nav>
+                            </Container>
+                        </Navbar>
 
-                    <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} emoji={this.state.home.emoji} text={this.state.home.text}/>}/>
-                    <Route path="/projects" render={() => <ProjectsPage title={this.state.projects.title} subTitle={this.state.projects.subTitle}/>}/>
-                    <Route path="/experience" render={() => <ExperiencePage title={this.state.experience.title} /> } />
-                    <Route path="/resume" render={() => <ResumePage title={this.state.resume.title} subTitle={this.state.resume.subTitle} /> } />
-                    <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} subTitle={this.state.contact.subTitle} emoji={this.state.contact.emoji}/>}/>
+                        {/*<Navbar collapseOnSelect expand="lg">*/}
+                        {/*    /!*<Navbar.Brand>Timothy Barrett</Navbar.Brand>*!/*/}
+                        {/*    <Navbar.Toggle className="border-0 " aria-controls="navbar-toggle"/>*/}
+                        {/*    <Navbar.Collapse id="navbar-toggle ">*/}
+                        {/*        <Nav className="m-auto nav-color">*/}
+                        {/*            <Link className="nav-link" to="/">Home</Link>*/}
+                        {/*            <Link className="nav-link" to="/projects">Projects</Link>*/}
+                        {/*            <Link className="nav-link" to="/experience">Experience</Link>*/}
+                        {/*            <Link variant="outline-info" className="nav-link" to="/resume">Resume</Link>*/}
+                        {/*            <Link className="nav-link" to="/contact">Contact</Link>*/}
+                        {/*        </Nav>*/}
+                        {/*    </Navbar.Collapse>*/}
+                        {/*</Navbar>*/}
+
+                        <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} emoji={this.state.home.emoji} text={this.state.home.text}/>}/>
+                        <Route path="/projects" render={() => <ProjectsPage title={this.state.projects.title} subTitle={this.state.projects.subTitle}/>}/>
+                        <Route path="/experience" render={() => <ExperiencePage title={this.state.experience.title} /> } />
+                        <Route path="/resume" render={() => <ResumePage title={this.state.resume.title} subTitle={this.state.resume.subTitle} /> } />
+                        <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} subTitle={this.state.contact.subTitle} emoji={this.state.contact.emoji}/>}/>
 
                     <Footer />
 
